@@ -19,9 +19,7 @@ A estrutura do projeto está em `src/aula25`, e cada arquivo representa uma prá
 ## Arquivo: `src/aula25/index.ts`
 
 
-### Trechos comentados
-
-O primeiro bloco comentado mostra uma função chamada `somar`:
+O primeiro bloco mostra uma função chamada `somar`:
 
 ```ts
 function somar(a:number,b:number): number{
@@ -32,9 +30,9 @@ const resultado = somar(10,5);
 console.log(resultado);
 ```
 
-A função recebe dois parâmetros numéricos (`a` e `b`), retorna a soma deles e imprime o valor no console. Esse exemplo ensina o uso de tipos de entrada e de retorno em TypeScript.
+A função recebe dois parâmetros numéricos (`a` e `b`), retorna a soma deles e imprime o valor no console.
 
-O segundo bloco comentado mostra `mostrarNome`:
+O segundo bloco mostra `mostrarNome`:
 
 ```ts
 function mostrarNome(nome:string): void{
@@ -44,9 +42,9 @@ function mostrarNome(nome:string): void{
 mostrarNome("thiago");
 ```
 
-Aqui a função recebe uma string e não retorna valor (`void`), apenas exibe uma mensagem no terminal. Esse exemplo demonstra como usar parâmetros tipados e template strings.
+Aqui a função recebe uma string e não retorna valor (`void`), apenas exibe uma mensagem no terminal.
 
-O terceiro bloco comentado mostra `pegarIdade`:
+O terceiro bloco mostra `pegarIdade`:
 
 ```ts
 function pegarIdade(): number{
@@ -57,9 +55,10 @@ const idade = pegarIdade();
 console.log(idade);
 ```
 
-Essa função não recebe parâmetros e retorna um número. Ela exemplifica o uso de funções com retorno explícito e armazenamento do valor em uma variável.
+Essa função não recebe parâmetros e retorna um número.
 
-O quarto bloco comentado mostra `mostrarMensagem`:
+
+O quarto bloco mostra `mostrarMensagem`:
 
 ```ts
 function mostrarMensagem(): void{
@@ -71,9 +70,8 @@ mostrarMensagem();
 
 Esse exemplo é simples, mas fundamental para entender a criação de funções que executam ações sem devolver um valor.
 
-### Parte executada do arquivo
 
-Depois dos blocos comentados, o código cria um tipo chamado `Pessoa`:
+Depois dos blocos anteriores, o código cria um tipo chamado `Pessoa`:
 
 ```ts
 type Pessoa = {nome:string,idade:number};
