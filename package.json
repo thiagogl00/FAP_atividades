@@ -12,6 +12,7 @@
     "dev:funcoes": "tsx src/aula26/funcoes.ts",
     "dev:types": "tsx src/aula26/types.ts",
     "dev:promises": "tsx src/aula26/promises.ts",
+    "dev:automatizaveis": "tsx src/atividades/automatizaveis.ts",
     "build": "tsc",
     "start": "node ."
   },
