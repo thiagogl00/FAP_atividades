@@ -1,6 +1,4 @@
-# FAP_atividades
-
-## Aula 25 - Fundamentos de TypeScript
+## Fundamentos de TypeScript
 
 Este projeto reúne exercícios práticos de TypeScript desenvolvidos na aula 25, com foco em conceitos básicos da linguagem, como:
 
