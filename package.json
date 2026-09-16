@@ -5,20 +5,25 @@
   "scripts": {
     "type-check": "tsc --noEmit",
     "dev": "npm run type-check && tsx src/aula25/index.ts",
-    "dev:atividade01":"tsx src/aula25/atividade01.ts",
-    "dev:atividade02":"tsx src/aula25/atividade02.ts",
-    "dev:atividade03":"tsx src/aula25/atividade03.ts",
-    "dev:atividade04":"tsx src/aula25/atividade04.ts",
+    "dev:condicionais": "tsx src/aula25/condicionais.ts",
+    "dev:contandoResultados": "tsx src/aula25/contandoResultados.ts",
+    "dev:loops": "tsx src/aula25/loops.ts",
+    "dev:tiposPrimitivos": "tsx src/aula25/tiposPrimitivos.ts",
+    "dev:funcoes": "tsx src/aula26/funcoes.ts",
+    "dev:types": "tsx src/aula26/types.ts",
+    "dev:promises": "tsx src/aula26/promises.ts",
     "build": "tsc",
     "start": "node ."
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
     "@types/node": "^26.5.0",
+    "@types/prompt-sync": "^4.2.3",
     "tsx": "^4.23.13",
     "typescript": "^7.0.2"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "prompt-sync": "^4.2.0"
   }
 }
