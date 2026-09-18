@@ -12,7 +12,6 @@
 - Criamos a função `criarCasoDeTeste(...)` para montar um objeto do tipo correto.
 - Criamos a função `descrever(...)` para formatar a saída em texto.
 - Criamos a função `marcarAutomatizado(...)` para alterar o valor da propriedade `automatizado`.
-- Montamos um exemplo de caso de teste realista para autenticação.
 
 ### Como rodar
 
