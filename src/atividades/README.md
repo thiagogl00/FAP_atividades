@@ -1,39 +1,48 @@
 # Atividades
 
-## Arquivo: automatizaveis.ts
+## Exercício: casos de teste
 
-O script abaixo pergunta ao usuário se um cenário pode ser automatizado e conta quantos foram classificados como automatizáveis e não automatizáveis.
+### O que foi feito
 
-### Objetivo
+- Definimos um tipo `CasoDeTeste` com as propriedades:
+  - `id: number`
+  - `titulo: string`
+  - `descricao: string`
+  - `automatizado: boolean`
+- Criamos a função `criarCasoDeTeste(...)` para montar um objeto do tipo correto.
+- Criamos a função `descrever(...)` para formatar a saída em texto.
+- Criamos a função `marcarAutomatizado(...)` para alterar o valor da propriedade `automatizado`.
+- Montamos um exemplo de caso de teste realista para autenticação.
 
-- Ler 5 cenários;
-- Perguntar se cada cenário é automatizável;
-- Validar a resposta do usuário;
-- Contar quantos cenários foram aceitos ou rejeitados;
-- Exibir o total final.
+### Como rodar
 
-### Como funciona
+No terminal, na raiz do projeto, execute:
 
-1. O código importa a biblioteca `prompt-sync` para capturar entradas pelo terminal.
-2. Cria duas variáveis para armazenar os totais:
-   - `automatizaveis`
-   - `naoAutomatizaveis`
-3. Usa um loop `for` para repetir a pergunta 5 vezes.
-4. Dentro do laço, um `while (true)` mantém o programa pedindo a resposta até que o usuário informe uma entrada válida.
-5. Se a resposta for `sim`, o cenário é considerado automatizável.
-6. Se a resposta for `não` ou `nao`, o cenário é classificado como não automatizável.
-7. Qualquer outra entrada exibe a mensagem `Ocorreu um erro` e repete a pergunta.
-8. Ao final, o programa mostra o total de cada categoria.
-
-### Exemplo de fluxo
-
-```ts
-const cenario = prompt(`Digite o 1° cenário: `);
-const resposta = prompt(`É automatizavél? [sim/não]: `).toLowerCase();
+```bash
+npm install
+npm run dev:casosdeteste
 ```
 
-Se o usuário digitar:
+Ou diretamente:
 
-- `sim` → o cenário entra na contagem de automatizáveis;
-- `não` → o cenário entra na contagem de não automatizáveis;
-- outro valor → aparece uma mensagem de erro e a pergunta se repete.
+```bash
+npx tsx src/atividades/casos-de-teste.ts
+```
+
+> Esse comando usa `tsx` para executar o arquivo TypeScript. O projeto também possui a checagem de tipos com `npm run type-check`.
+
+### Erro de tipo provocado
+
+![Erro de tipagem](error/error.png)
+
+Foi intencionalmente introduzido um erro de tipagem ao chamar a função assim:
+
+```ts
+const primeiroCasoDeTeste = criarCasoDeTeste("1", "Autenticação", "Login via número de telefone e código de verificação (SMS)", false);
+```
+
+O problema é que o primeiro parâmetro `id` foi passado como string, mas a tipagem exige `number`:
+
+```ts
+id: number
+```
